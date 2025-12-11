@@ -1,0 +1,59 @@
+#How to Test the System
+
+1. Submit a New Request (Canvas App Test)
+
+Open the EquipmentRequestApp.
+
+Fill in:
+
+Employee Name
+
+Employee Email
+
+Item Requested
+
+Quantity
+
+Click Submit Request.
+
+Confirm the app navigates to Confirmation Screen.
+
+Go to My Requests and verify the new request appears.
+
+Expected Result:
+A new row is created in the EquipmentRequests Dataverse table with Status = Pending.
+
+2. Manager Receives Email Notification
+
+Open the Manager/test email inbox.
+
+Submit another request from the app.
+
+Check for an email titled “New equipment request from <EmployeeName>”.
+
+Expected Result:
+A notification email is received within seconds.
+
+3. Manager Approves or Rejects
+
+Open the approval email.
+
+Click Approve → confirm.
+
+OR click Reject → confirm.
+
+Expected Result:
+The Dataverse record updates Status to Approved or Rejected, and logs:
+
+ApprovedBy
+
+ApprovedOn
+
+4. Employee Views Updated Status
+
+Open the app → go to My Requests.
+
+Locate the same request.
+
+Expected Result:
+Status updates from Pending to Approved or Rejected in real time.
